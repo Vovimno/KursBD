@@ -62,9 +62,11 @@ namespace KursBD.Forms
             Tag1Label.Text = Tag?.Tag1;
             //Tag2Label.Text = Tag.Tag2;
 
-            
-
-
+            var Reviews = context.GetReviews(game.Id);
+            foreach (var review in Reviews)
+            {
+                ReviewlistBox1.Items.Add(review.ToString());
+            }
         }
 
         private void HIdeButton_Click(object sender, EventArgs e)
@@ -98,10 +100,24 @@ namespace KursBD.Forms
         {
             lastPoint = new Point(e.X, e.Y);
         }
-    
-        
-        
-        
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            db db = new db();
+            var context = new Context(db);
+
+            var newReview = richTextBox1.Text;
+
+            // 1. сделать инсерт в базу новой строки
+            //context.AddNewReview(newReview, ...);
+
+            // 2. сделать как ниже (т.е. раскоментить код)
+            //var Reviews = context.GetReviews(game.Id);
+            //ReviewlistBox1.Items.Clear();
+            //foreach (var review in Reviews)
+            //{
+            //    ReviewlistBox1.Items.Add(review.ToString());
+            //}
+        }
     }
 }

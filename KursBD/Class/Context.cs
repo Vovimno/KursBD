@@ -124,32 +124,31 @@ namespace KursBD.Class
             return new Tags
             {
                 Tag1 = list.Distinct().Aggregate(string.Empty, (acc, cur) => $"{acc}, {cur}").Trim(new[] { ' ', ',' }),
-                //Tag2 = (string)item.ItemArray[1],
-                //Tag3 = (string)item.ItemArray[2]
+                
             };
         }
 
-        public Reviews GetReviews(int gameId)
+        public List<Reviews> GetReviews(int gameId)
         {
             var table = new DataTable();
             var adapter = new NpgsqlDataAdapter();
-            var command = new NpgsqlCommand($"SELECT \"Tags\".\"Name\" FROM \"TagsGame\" Inner join \"Tags\" on \"idTags\" = \"idGame\" WHERE \"id\" = {gameId}", database.GetConnection());
+            var command = new NpgsqlCommand($"Select R.\"Review\", U.\"Login\", U.\"Nickname\" From public.\"Reviews\" R Inner join public.\"Users\" U on R.\"IdUser\" = U.\"id\" Where R.\"idGame\" = {gameId}", database.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
             if (table.Rows.Count == 0) return null;
 
-            DataRow item = table.Rows[0];
-            return new Reviews
+            var list = new List<Reviews>();
+            foreach (DataRow item in table.Rows)
             {
-                
-            };
+                list.Add(new Reviews
+                {
+                    reviews = (string)item.ItemArray[0],
+                    Login = (string)item.ItemArray[1],
+                    Nickname = item.ItemArray[2] is DBNull ? null : (string)item.ItemArray[2]
+                });
+            }
 
-
+            return list;
         }
-    }
-    public class Reviews
-    {
-        public int Id { get; set; } 
-
     }
 }

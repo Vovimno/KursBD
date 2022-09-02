@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GamePage));
             this.mainPanelGamePageForm = new System.Windows.Forms.Panel();
+            this.ReviewlistBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.GameNameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Pricelabel = new System.Windows.Forms.Label();
@@ -79,6 +83,10 @@
             // mainPanelGamePageForm
             // 
             this.mainPanelGamePageForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
+            this.mainPanelGamePageForm.Controls.Add(this.ReviewlistBox1);
+            this.mainPanelGamePageForm.Controls.Add(this.button1);
+            this.mainPanelGamePageForm.Controls.Add(this.label11);
+            this.mainPanelGamePageForm.Controls.Add(this.richTextBox1);
             this.mainPanelGamePageForm.Controls.Add(this.GameNameLabel);
             this.mainPanelGamePageForm.Controls.Add(this.panel1);
             this.mainPanelGamePageForm.Controls.Add(this.DescriptionText);
@@ -96,10 +104,49 @@
             this.mainPanelGamePageForm.Location = new System.Drawing.Point(0, 0);
             this.mainPanelGamePageForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainPanelGamePageForm.Name = "mainPanelGamePageForm";
-            this.mainPanelGamePageForm.Size = new System.Drawing.Size(1359, 676);
+            this.mainPanelGamePageForm.Size = new System.Drawing.Size(1359, 836);
             this.mainPanelGamePageForm.TabIndex = 3;
             this.mainPanelGamePageForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainPanelGamePageForm_MouseDown);
             this.mainPanelGamePageForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainPanelGamePageForm_MouseMove);
+            // 
+            // ReviewlistBox1
+            // 
+            this.ReviewlistBox1.FormattingEnabled = true;
+            this.ReviewlistBox1.HorizontalScrollbar = true;
+            this.ReviewlistBox1.ItemHeight = 15;
+            this.ReviewlistBox1.Location = new System.Drawing.Point(576, 691);
+            this.ReviewlistBox1.Name = "ReviewlistBox1";
+            this.ReviewlistBox1.Size = new System.Drawing.Size(384, 229);
+            this.ReviewlistBox1.TabIndex = 55;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 801);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Отправить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(168, 626);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 32);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Отзывы";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(168, 691);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(383, 97);
+            this.richTextBox1.TabIndex = 52;
+            this.richTextBox1.Text = "";
             // 
             // GameNameLabel
             // 
@@ -548,7 +595,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 676);
+            this.ClientSize = new System.Drawing.Size(1359, 836);
             this.Controls.Add(this.mainPanelGamePageForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GamePage";
@@ -609,5 +656,9 @@
         private Label label15;
         private Label label14;
         private Panel panel3;
+        private Label label11;
+        private RichTextBox richTextBox1;
+        private ListBox ReviewlistBox1;
+        private Button button1;
     }
 }
