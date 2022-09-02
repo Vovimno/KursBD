@@ -57,9 +57,9 @@ namespace KursBD.Forms
 
             var Pub = context.GetPublishers(game.IdPublishers);
             PublisherLabel.Text = Pub.NamePublisher;
-
+             
             var Tag = context.GetTags(game.Id);
-            Tag1Label.Text = Tag.Tag1;
+            Tag1Label.Text = Tag?.Tag1;
             //Tag2Label.Text = Tag.Tag2;
 
             

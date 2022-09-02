@@ -29,8 +29,11 @@ C:\Users\vladimir\Desktop\KursBD\KursBD\bin\Debug\net6.0-windows\KursBD.pdb
 C:\Users\vladimir\Desktop\KursBD\KursBD\bin\Debug\net6.0-windows\MySqlConnector.dll
 C:\Users\vladimir\Desktop\KursBD\KursBD\bin\Debug\net6.0-windows\Npgsql.dll
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.csproj.AssemblyReference.cache
-C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Properties.Resources.resources
+C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.GamePage.resources
+C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.LoginForm.resources
+C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.MainForm.resources
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.RegisterForm.resources
+C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Properties.Resources.resources
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.csproj.GenerateResource.cache
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.AssemblyInfoInputs.cache
@@ -42,6 +45,3 @@ C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\refint\KursBD.d
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.pdb
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.genruntimeconfig.cache
 C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\ref\KursBD.dll
-C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.GamePage.resources
-C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.LoginForm.resources
-C:\Users\vladimir\Desktop\KursBD\KursBD\obj\Debug\net6.0-windows\KursBD.Forms.MainForm.resources

@@ -60,7 +60,6 @@
             this.SystemReqGPU = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Tag2Label = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Tag1Label = new System.Windows.Forms.Label();
             this.PublisherLabel = new System.Windows.Forms.Label();
@@ -444,7 +443,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.Tag2Label);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.Tag1Label);
             this.panel3.Controls.Add(this.PublisherLabel);
@@ -457,17 +455,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(324, 160);
             this.panel3.TabIndex = 51;
-            // 
-            // Tag2Label
-            // 
-            this.Tag2Label.AutoSize = true;
-            this.Tag2Label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Tag2Label.ForeColor = System.Drawing.SystemColors.Window;
-            this.Tag2Label.Location = new System.Drawing.Point(64, 124);
-            this.Tag2Label.Name = "Tag2Label";
-            this.Tag2Label.Size = new System.Drawing.Size(53, 19);
-            this.Tag2Label.TabIndex = 57;
-            this.Tag2Label.Text = "Метки:";
             // 
             // label14
             // 
@@ -622,6 +609,5 @@
         private Label label15;
         private Label label14;
         private Panel panel3;
-        private Label Tag2Label;
     }
 }

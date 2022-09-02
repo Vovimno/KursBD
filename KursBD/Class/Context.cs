@@ -106,16 +106,24 @@ namespace KursBD.Class
         {
             var table = new DataTable();
             var adapter = new NpgsqlDataAdapter();
-            var command = new NpgsqlCommand($"SELECT \"Tags\".\"Name\" FROM \"TagsGame\" Inner join \"Tags\" on \"idTags\" = \"idGame\" WHERE \"id\" = {gameId}", database.GetConnection());
+            var command = new NpgsqlCommand($"select TGS.\"Name\" from public.\"TagsGame\" TG inner join public.\"Tags\" TGS on TG.\"idTags\" = TGS.id Where TG.\"idGame\" = {gameId}", database.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
             if (table.Rows.Count == 0) return null;
 
-            DataRow item = table.Rows[0];
+            var list = new List<string>();
+            foreach (DataRow item in table.Rows)
+            {
+                foreach (string value in item.ItemArray)
+                {
+                    list.Add(value);
+                }
+            }
+
             return new Tags
             {
-                Tag1 = (string)item.ItemArray[0],
+                Tag1 = list.Distinct().Aggregate(string.Empty, (acc, cur) => $"{acc}, {cur}").Trim(new[] { ' ', ',' }),
                 //Tag2 = (string)item.ItemArray[1],
                 //Tag3 = (string)item.ItemArray[2]
             };
